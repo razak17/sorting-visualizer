@@ -1,5 +1,6 @@
 "use client";
 
+import Info from "@/components/info";
 import Navbar from "@/components/navbar/navbar";
 import { useSortingAlgorithmContext } from "@/context/visualizer";
 
@@ -13,7 +14,10 @@ export default function Home() {
           id="content-container"
           className="flex max-w-[1020px] w-full flex-col lg:px-0 px-4"
         >
-          <Navbar />
+          <div className="h-[66px] relative flex items-center justify-between w-full">
+            <Navbar />
+            <Info />
+          </div>
 
           <div className="relative h-[calc(100vh-66px)] w-full">
             <div className="absolute bottom-[32px] w-full mx-auto left-0 right-0 flex justify-center items-end">
