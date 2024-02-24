@@ -6,6 +6,7 @@ import { Select } from "@/components/input/select";
 import { Slider } from "@/components/input/slider";
 import { useSortingAlgorithmContext } from "@/context/visualizer";
 import { SortingAlgorithmType } from "@/lib/types";
+import { generateAnimationArray } from "@/lib/utils";
 
 export default function Controls() {
   const {
@@ -36,6 +37,13 @@ export default function Controls() {
       resetArrayAndAnimation();
       return;
     }
+
+    generateAnimationArray(
+      selectedAlgorithm,
+      isSorting,
+      arrayToSort,
+      runAnimation,
+    );
   };
 
   return (

@@ -62,7 +62,7 @@ export const SortingAlgorithmProvider = ({
     if (!contentContainer) return;
     const contentContainerWidth = contentContainer.clientWidth;
 
-    const tempArray: number[] = [];
+    const tempArray: Array<number> = [];
     const numLines = contentContainerWidth / 8;
     const containerHeight = window.innerHeight;
     const maxLineHeight = Math.max(containerHeight - 420, 100);
